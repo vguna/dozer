@@ -5,6 +5,38 @@
 [ ![Download](https://api.bintray.com/packages/buzdin/dozer-mapper/dozer/images/download.png) ](https://bintray.com/buzdin/dozer-mapper/dozer/_latestVersion)
 ================================
 
+This is a fork of the original Dozer project
+--------------------------------
+Due to inactivity of the original project for years, this fork has been created.
+It should provide a binary build of the last 5.5.1 version plus PRs/patches that have been provided over the years but have not been merged yet.
+This project should mainly focus on bugfixes and smaller enhancements since we're not familiar with the code base (yet).
+PRs should always contain testcases to show the actual problem and to test the provided fix.
+
+The original group- and artifact ids have been left intact to signal that it's just a patch version.
+Different releases of this artifact just use the last version plus the suffix `-VGUNA-<serial>`. So the first version will be `5.5.1-VGUNA-1`. 
+
+### Included PRs
+
+Currently this version contains the following PRs:
+- Fixes compatibility issues with javassist 3.18.1-GA (https://github.com/DozerMapper/dozer/pull/239)
+
+### How to use in pom.xml
+
+For now, this project temporarily provides its artifacts via its github page for simplicity.
+Just add this repository configuration to your own pom.xml and you're good to go:
+
+```xml
+<repositories>
+    <repository>
+        <id>dozer-mvn-repo</id>
+        <url>https://raw.github.com/vguna/dozer/mvn-repo/</url>
+        <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+        </snapshots>
+    </repository>
+</repositories>
+```
 
 Why Map?
 --------------------------------
