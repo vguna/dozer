@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>net.sf.dozer</groupId>
+  <artifactId>dozer</artifactId>
+  <versioning>
+    <versions>
+      <version>5.5.1-vguna-1-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20160925112020</lastUpdated>
+  </versioning>
+</metadata>
