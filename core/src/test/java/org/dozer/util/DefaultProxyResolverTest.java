@@ -15,12 +15,13 @@
  */
 package org.dozer.util;
 
+import java.util.Calendar;
+
+import org.dozer.functional_tests.runner.JavassistDataObjectInstantiator;
 import org.dozer.functional_tests.runner.ProxyDataObjectInstantiator;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.util.Calendar;
 
 /**
  * @author Dmitry Buzdin
@@ -42,7 +43,7 @@ public class DefaultProxyResolverTest extends Assert {
   }
 
   @Test
-  public void testGetRealClass() throws Exception {
+  public void testGetRealClassCGLIB() throws Exception {
     Object proxy = ProxyDataObjectInstantiator.INSTANCE.newInstance(Calendar.class);
     assertFalse(proxy.getClass().equals(Calendar.class));
 
@@ -50,4 +51,30 @@ public class DefaultProxyResolverTest extends Assert {
     assertTrue(realClass.equals(Calendar.class));
   }
 
+  @Test
+  public void testIsProxyCGLIB() throws Exception {
+    Object proxy = ProxyDataObjectInstantiator.INSTANCE.newInstance(Calendar.class);
+    assertTrue(resolver.isProxy(proxy.getClass()));
+  }
+
+  @Test
+  public void testGetRealClassJavassist() throws Exception {
+    Object proxy = JavassistDataObjectInstantiator.INSTANCE.newInstance(Calendar.class);
+    assertFalse(proxy.getClass().equals(Calendar.class));
+
+    Class<?> realClass = resolver.getRealClass(proxy.getClass());
+    assertTrue(realClass.equals(Calendar.class));
+  }
+
+  @Test
+  public void testIsProxyJavassist() throws Exception {
+    // javassist adds prefix "org.javassist.tmp" to original package names for
+    // "java." classes
+    Object proxy = JavassistDataObjectInstantiator.INSTANCE.newInstance(Calendar.class);
+    assertTrue(resolver.isProxy(proxy.getClass()));
+
+    // no prefix for non "java." classes
+    proxy = JavassistDataObjectInstantiator.INSTANCE.newInstance(DefaultProxyResolver.class);
+    assertTrue(resolver.isProxy(proxy.getClass()));
+  }
 }
