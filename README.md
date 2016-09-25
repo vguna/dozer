@@ -10,10 +10,9 @@ This is a fork of the original Dozer project
 Due to inactivity of the original project for years, this fork has been created.
 It should provide a binary build of the last 5.5.1 version plus PRs/patches that have been provided over the years but have not been merged yet.
 This project should mainly focus on bugfixes and smaller enhancements since we're not familiar with the code base (yet).
-PRs should always contain testcases to show the actual problem and to test the provided fix.
 
 The original group- and artifact ids have been left intact to signal that it's just a patch version.
-Different releases of this artifact just use the last version plus the suffix `-vguna-<serial>`. So the first version will be `5.5.1-vguna-1`. 
+Different releases of this artifact just use the last official dozer version plus the suffix `-vguna-<serial>`. So the first version will be `5.5.1-vguna-1`. 
 
 ### Included PRs
 
@@ -55,6 +54,10 @@ Maven coordinates can be kept as is, but a different version has to be specified
 </dependency>
 ...
 ```
+
+### Contributions
+
+PRs are very welcome and should always contain testcases to show the actual problem and to test the provided fix.
 
 Why Map?
 --------------------------------
