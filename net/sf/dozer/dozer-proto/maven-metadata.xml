@@ -3,11 +3,9 @@
   <groupId>net.sf.dozer</groupId>
   <artifactId>dozer-proto</artifactId>
   <versioning>
-    <release>5.5.1-VGUNA-1</release>
     <versions>
-      <version>5.5.1-vguna-1</version>
-      <version>5.5.1-VGUNA-1</version>
+      <version>5.5.1-VGUNA-1-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20160925101406</lastUpdated>
+    <lastUpdated>20160925102919</lastUpdated>
   </versioning>
 </metadata>
