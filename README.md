@@ -1,4 +1,4 @@
-# Maven Repository for Dozer fork
+# Maven Repository
 
 This is the maven repository that hosts the binaries for the fork on github itself like described here:
 
