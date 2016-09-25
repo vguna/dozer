@@ -13,7 +13,7 @@ This project should mainly focus on bugfixes and smaller enhancements since we'r
 PRs should always contain testcases to show the actual problem and to test the provided fix.
 
 The original group- and artifact ids have been left intact to signal that it's just a patch version.
-Different releases of this artifact just use the last version plus the suffix `-VGUNA-<serial>`. So the first version will be `5.5.1-VGUNA-1`. 
+Different releases of this artifact just use the last version plus the suffix `-vguna-<serial>`. So the first version will be `5.5.1-vguna-1`. 
 
 ### Included PRs
 
@@ -26,6 +26,7 @@ For now, this project temporarily provides its artifacts via its github page for
 Just add this repository configuration to your own pom.xml and you're good to go:
 
 ```xml
+...
 <repositories>
     <repository>
         <id>dozer-mvn-repo</id>
@@ -36,6 +37,23 @@ Just add this repository configuration to your own pom.xml and you're good to go
         </snapshots>
     </repository>
 </repositories>
+...
+```
+
+Maven coordinates can be kept as is, but a different version has to be specified:
+
+```xml
+...
+<properties>
+	<dozer.version>5.5.1-vguna-1-SNAPSHOT</dozer.version>
+</properties>
+...
+<dependency>
+	<groupId>net.sf.dozer</groupId>
+	<artifactId>dozer</artifactId>
+	<version>${dozer.version}</version>
+</dependency>
+...
 ```
 
 Why Map?
