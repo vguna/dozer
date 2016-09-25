@@ -1,8 +1,6 @@
 <a href="http://dozer.sf.net"><img src="http://dozer.sourceforge.net/images/dozer.png" alt="Dozer" width="58" height="42"></a>
-
-[![Build Status](https://api.travis-ci.org/DozerMapper/dozer.png)](https://travis-ci.org/DozerMapper/dozer)
-[![Dependency Status](https://www.versioneye.com/user/projects/5325a858ec137554460002e1/badge.png)](https://www.versioneye.com/user/projects/5325a858ec137554460002e1)
-[ ![Download](https://api.bintray.com/packages/buzdin/dozer-mapper/dozer/images/download.png) ](https://bintray.com/buzdin/dozer-mapper/dozer/_latestVersion)
+https://travis-ci.org/vguna/dozer#
+[![Build Status](https://api.travis-ci.org/vguna/dozer.png)](https://travis-ci.org/vguna/dozer)
 ================================
 
 This is a fork of the original Dozer project
