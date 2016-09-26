@@ -1,5 +1,4 @@
 <a href="http://dozer.sf.net"><img src="http://dozer.sourceforge.net/images/dozer.png" alt="Dozer" width="58" height="42"></a>
-https://travis-ci.org/vguna/dozer#
 [![Build Status](https://api.travis-ci.org/vguna/dozer.png)](https://travis-ci.org/vguna/dozer)
 ================================
 
